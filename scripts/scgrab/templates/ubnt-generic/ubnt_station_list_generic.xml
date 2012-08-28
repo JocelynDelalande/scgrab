@@ -1,0 +1,157 @@
+<interface>
+    <name>Get Associated Stations Information</name>
+    <script_path>|path_cacti|/scripts/scgrab/scgrab.py</script_path>
+    <arg_prepend> --host |host_hostname| --authcred=monitor-keypass.txt --authkey=monitor.ppk --authkeydsa --plugin=ubnt-wstalist --query mode=arg-index,format=xm5_cacti-0.8</arg_prepend>
+    <arg_index>index</arg_index>
+    <arg_query>query</arg_query>
+    <arg_get>get</arg_get>
+    <output_delimeter>!</output_delimeter>
+    <index_order>staMAC</index_order>
+    <index_order_type>alphabetic</index_order_type>
+    <index_title_format>|chosen_order_field|</index_title_format>
+    <fields>
+        <staMAC>
+            <name>WLAN MAC</name>
+            <direction>input</direction>
+            <query_name>mac</query_name>
+        </staMAC>
+        
+        <staName>
+            <name>Unit Name</name>
+            <direction>input</direction>
+            <query_name>name</query_name>
+        </staName>
+
+        <staLastIP>
+            <name>Last IP</name>
+            <direction>input</direction>
+            <query_name>lastip</query_name>
+        </staLastIP>
+
+        <staAssocID>
+            <name>Association ID</name>
+            <direction>input</direction>
+            <query_name>associd</query_name>
+        </staAssocID>
+
+        <staSignal>
+            <name>Signal</name>
+                <direction>output</direction>
+                <query_name>signal</query_name>
+        </staSignal>
+                
+        <staNoiseFloor>
+            <name>Noise Floor</name>
+            <direction>output</direction>
+            <query_name>noisefloor</query_name>
+        </staNoiseFloor>
+                
+        <staFadeMargin>
+            <name>Fade Margin</name>
+            <direction>output</direction>
+            <query_name>fadeMarginCustom</query_name>
+        </staFadeMargin>
+        
+        <staCCQ>
+            <name>CCQ</name>
+            <direction>output</direction>
+            <query_name>ccq</query_name>
+        </staCCQ>
+        
+        <staTXRate>
+            <name>TX Rate</name>
+            <direction>output</direction>
+            <query_name>tx</query_name>
+        </staTXRate>
+        
+        <staRXRate>
+            <name>RX Rate</name>
+            <direction>output</direction>
+            <query_name>rx</query_name>
+        </staRXRate>
+        
+        <staUptime>
+            <name>Link Uptime</name>
+            <direction>output</direction>
+            <query_name>uptime</query_name>
+        </staUptime>
+        
+        <staACK>
+            <name>ACK</name>
+            <direction>output</direction>
+            <query_name>ack</query_name>
+        </staACK>
+        
+        <staDistance>
+            <name>Distance</name>
+            <direction>output</direction>
+            <query_name>distance</query_name>
+        </staDistance>
+        
+        <staIdle>
+            <name>Idle</name>
+            <direction>output</direction>
+            <query_name>idle</query_name>
+        </staIdle>
+        
+        <staAirmaxQuality>
+            <name>Airmax Quality</name>
+            <direction>output</direction>
+            <query_name>airmax.quality</query_name>
+        </staAirmaxQuality>
+        
+        <staAirmaxCapacity>
+            <name>Airmax Capacity</name>
+            <direction>output</direction>
+            <query_name>airmax.capacity</query_name>
+        </staAirmaxCapacity>
+        
+        <staAirmaxPriority>
+            <name>Airmax Priority</name>
+            <direction>output</direction>
+            <query_name>airmax.priority</query_name>
+        </staAirmaxPriority>
+        
+        <staTXPower>
+            <name>TX Power</name>
+            <direction>output</direction>
+            <query_name>txpower</query_name>
+        </staTXPower>
+        
+        <staStatsRXPPS>
+            <name>RX Packets/Second</name>
+            <direction>output</direction>
+            <query_name>stats.rx_pps</query_name>
+        </staStatsRXPPS>
+        
+        <staStatsTXPPS>
+            <name>TX Packets/Second</name>
+            <direction>output</direction>
+            <query_name>stats.tx_pps</query_name>
+        </staStatsTXPPS>
+        
+        <staStatsRXData>
+            <name>RX Data</name>
+            <direction>output</direction>
+            <query_name>stats.rx_data</query_name>
+        </staStatsRXData>
+        
+        <staStatsTXData>
+            <name>TX Data</name>
+            <direction>output</direction>
+            <query_name>stats.tx_data</query_name>
+        </staStatsTXData>
+        
+        <staStatsRXBytes>
+            <name>RX Bytes</name>
+            <direction>output</direction>
+            <query_name>stats.rx_bytes</query_name>
+        </staStatsRXBytes>
+        
+        <staStatsTXBytes>
+            <name>TX Bytes</name>
+            <direction>output</direction>
+            <query_name>stats.tx_bytes</query_name>
+        </staStatsTXBytes>
+        </fields>
+</interface>

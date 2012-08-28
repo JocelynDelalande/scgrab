@@ -1,0 +1,156 @@
+<cacti>	
+	<hash_010021850f7b6f63d4994875aeaf15f1670505>
+		<name>UBNT - WLAN - Signal</name>
+		<ds>
+			<t_name></t_name>
+			<name>|host_description| - Wireless Statistics - Signal</name>
+			<data_input_id>hash_030021af939ce728c341d29fb4f15798f0d2d7</data_input_id>
+			<t_rra_id></t_rra_id>
+			<t_rrd_step></t_rrd_step>
+			<rrd_step>300</rrd_step>
+			<t_active></t_active>
+			<active>on</active>
+			<rra_items>hash_150021c21df5178e5c955013591239eb0afd46|hash_1500210d9c0af8b8acdc7807943937b3208e29|hash_1500216fc2d038fb42950138b0ce3e9874cc60|hash_150021e36f3adb9f152adfa5dc50fd2b23337e|hash_150021283ea2bf1634d92ce081ec82a634f513</rra_items>
+		</ds>
+		<items>
+			<hash_08002109ff651ba49f4e29db8284d3fe4dc2f9>
+				<t_data_source_name></t_data_source_name>
+				<data_source_name>ubnt_signal</data_source_name>
+				<t_rrd_minimum></t_rrd_minimum>
+				<rrd_minimum>-100</rrd_minimum>
+				<t_rrd_maximum></t_rrd_maximum>
+				<rrd_maximum>0</rrd_maximum>
+				<t_data_source_type_id></t_data_source_type_id>
+				<data_source_type_id>1</data_source_type_id>
+				<t_rrd_heartbeat></t_rrd_heartbeat>
+				<rrd_heartbeat>600</rrd_heartbeat>
+				<t_data_input_field_id></t_data_input_field_id>
+				<data_input_field_id>hash_07002182531fd2569e83c2b82d07022302bb52</data_input_field_id>
+			</hash_08002109ff651ba49f4e29db8284d3fe4dc2f9>
+			<hash_0800217c6c53946d982972965c2d4540b4e04d>
+				<t_data_source_name></t_data_source_name>
+				<data_source_name>ubnt_fade</data_source_name>
+				<t_rrd_minimum></t_rrd_minimum>
+				<rrd_minimum>-100</rrd_minimum>
+				<t_rrd_maximum></t_rrd_maximum>
+				<rrd_maximum>0</rrd_maximum>
+				<t_data_source_type_id></t_data_source_type_id>
+				<data_source_type_id>1</data_source_type_id>
+				<t_rrd_heartbeat></t_rrd_heartbeat>
+				<rrd_heartbeat>600</rrd_heartbeat>
+				<t_data_input_field_id></t_data_input_field_id>
+				<data_input_field_id>hash_070021d2882183b722855929c3232b32f91d43</data_input_field_id>
+			</hash_0800217c6c53946d982972965c2d4540b4e04d>
+			<hash_080021860cb02b3853445d62509a489ced5dcd>
+				<t_data_source_name></t_data_source_name>
+				<data_source_name>ubnt_noise</data_source_name>
+				<t_rrd_minimum></t_rrd_minimum>
+				<rrd_minimum>-100</rrd_minimum>
+				<t_rrd_maximum></t_rrd_maximum>
+				<rrd_maximum>0</rrd_maximum>
+				<t_data_source_type_id></t_data_source_type_id>
+				<data_source_type_id>1</data_source_type_id>
+				<t_rrd_heartbeat></t_rrd_heartbeat>
+				<rrd_heartbeat>600</rrd_heartbeat>
+				<t_data_input_field_id></t_data_input_field_id>
+				<data_input_field_id>hash_070021a4606c81540effd7cc7024a917eefee2</data_input_field_id>
+			</hash_080021860cb02b3853445d62509a489ced5dcd>
+		</items>
+		<data>
+			<item_000>
+				<data_input_field_id>hash_070021ef31768c7a9ae03975071686c747df63</data_input_field_id>
+				<t_value></t_value>
+				<value></value>
+			</item_000>
+		</data>
+	</hash_010021850f7b6f63d4994875aeaf15f1670505>
+	<hash_030021af939ce728c341d29fb4f15798f0d2d7>
+		<name>UBNT - query wlanSignalAllCustom</name>
+		<type_id>1</type_id>
+		<input_string>python &lt;path_cacti&gt;/scripts/scgrab/scgrab.py 
+	--authcred=monitor-keypass.txt 
+	--authkey=monitor.ppk 
+	--authkeydsa 
+	--host=&lt;host&gt; 
+	--plugin=ubnt-mcastatus 
+	--query=wlanSignalAllCustom</input_string>
+		<fields>
+			<hash_070021a4606c81540effd7cc7024a917eefee2>
+				<name>Noise Level dBm</name>
+				<update_rra>on</update_rra>
+				<regexp_match></regexp_match>
+				<allow_nulls></allow_nulls>
+				<type_code></type_code>
+				<input_output>out</input_output>
+				<data_name>noise</data_name>
+			</hash_070021a4606c81540effd7cc7024a917eefee2>
+			<hash_070021d2882183b722855929c3232b32f91d43>
+				<name>Fade Margin dBm</name>
+				<update_rra>on</update_rra>
+				<regexp_match></regexp_match>
+				<allow_nulls></allow_nulls>
+				<type_code></type_code>
+				<input_output>out</input_output>
+				<data_name>fade</data_name>
+			</hash_070021d2882183b722855929c3232b32f91d43>
+			<hash_07002182531fd2569e83c2b82d07022302bb52>
+				<name>RX Signal dBm</name>
+				<update_rra>on</update_rra>
+				<regexp_match></regexp_match>
+				<allow_nulls></allow_nulls>
+				<type_code></type_code>
+				<input_output>out</input_output>
+				<data_name>signal</data_name>
+			</hash_07002182531fd2569e83c2b82d07022302bb52>
+			<hash_070021ef31768c7a9ae03975071686c747df63>
+				<name>Host Address</name>
+				<update_rra></update_rra>
+				<regexp_match></regexp_match>
+				<allow_nulls></allow_nulls>
+				<type_code>hostname</type_code>
+				<input_output>in</input_output>
+				<data_name>host</data_name>
+			</hash_070021ef31768c7a9ae03975071686c747df63>
+		</fields>
+	</hash_030021af939ce728c341d29fb4f15798f0d2d7>
+	<hash_150021c21df5178e5c955013591239eb0afd46>
+		<name>Daily (5 Minute Average)</name>
+		<x_files_factor>0.5</x_files_factor>
+		<steps>1</steps>
+		<rows>600</rows>
+		<timespan>86400</timespan>
+		<cf_items>1|3|4</cf_items>
+	</hash_150021c21df5178e5c955013591239eb0afd46>
+	<hash_1500210d9c0af8b8acdc7807943937b3208e29>
+		<name>Weekly (30 Minute Average)</name>
+		<x_files_factor>0.5</x_files_factor>
+		<steps>6</steps>
+		<rows>700</rows>
+		<timespan>604800</timespan>
+		<cf_items>1|3|4</cf_items>
+	</hash_1500210d9c0af8b8acdc7807943937b3208e29>
+	<hash_1500216fc2d038fb42950138b0ce3e9874cc60>
+		<name>Monthly (2 Hour Average)</name>
+		<x_files_factor>0.5</x_files_factor>
+		<steps>24</steps>
+		<rows>775</rows>
+		<timespan>2678400</timespan>
+		<cf_items>1|3|4</cf_items>
+	</hash_1500216fc2d038fb42950138b0ce3e9874cc60>
+	<hash_150021e36f3adb9f152adfa5dc50fd2b23337e>
+		<name>Yearly (1 Day Average)</name>
+		<x_files_factor>0.5</x_files_factor>
+		<steps>288</steps>
+		<rows>797</rows>
+		<timespan>33053184</timespan>
+		<cf_items>1|3|4</cf_items>
+	</hash_150021e36f3adb9f152adfa5dc50fd2b23337e>
+	<hash_150021283ea2bf1634d92ce081ec82a634f513>
+		<name>Hourly (1 Minute Average)</name>
+		<x_files_factor>0.5</x_files_factor>
+		<steps>1</steps>
+		<rows>500</rows>
+		<timespan>14400</timespan>
+		<cf_items>1|3|4</cf_items>
+	</hash_150021283ea2bf1634d92ce081ec82a634f513>
+</cacti>

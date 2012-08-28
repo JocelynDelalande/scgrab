@@ -1,0 +1,32 @@
+[
+        {
+                "mac": "00:15:6D:F0:BE:EF",
+                "name" : "",
+                "lastip" : "10.4.1.2",
+                "associd" : 1,
+                "apwds" : 0,
+                "tx" : 13,
+                "rx" : 13,
+                "signal" : -47,
+                "ccq" : 100,
+                "idle" : 0,
+                "uptime" : 59771,
+                "ack" : 95,
+                "distance" : 1500,
+                "txpower" : 40,
+                "noisefloor" : -94,
+                "airmax" : {
+                        "priority" : 3,
+                        "quality" : 83,
+                        "capacity" : 37 },
+                "stats" : {
+                        "rx_data" : 5344609,
+                        "rx_bytes" : 1535116157,
+                        "rx_pps" : 57,
+                        "tx_data" : 6523251,
+                        "tx_bytes" : 7113818364,
+                        "tx_pps" : 78 },
+                "rates" : [ "MCS0", "MCS1", "MCS2", "MCS3", "MCS4", "MCS5", "MCS6", "MCS7", "MCS8", "MCS9", "MCS10", "MCS11", "MCS12", "MCS13", "MCS14", "MCS15" ],
+                "signals" : [ 0, 0, 0, 0, -49, 0, 0, 0, 0, 0, 0, -47, 0, 0, 0, 0 ]
+        }
+]
