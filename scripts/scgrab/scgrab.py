@@ -381,15 +381,12 @@ if __name__ == '__main__':
 
     # build up variables
     if len(config.auth_cred):
-        authCredFile = "%s%s%s%s%s" % \
-            (config.script_dir, os.sep, config.auth_dir, os.sep, config.auth_cred)
+        authCredFile = "%s" % config.auth_cred
     else:
         authCredFile = ''
         
     if len(config.auth_key):
-        authKeyFile = "%s%s%s%s%s%s%s" % \
-            (config.script_dir, os.sep, config.auth_dir, os.sep,
-                config.key_dir, os.sep, config.auth_key)
+        authKeyFile = "%s" % config.auth_key
     else:
         authKeyFile = ''
 
